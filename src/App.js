@@ -1,24 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import Header from "./components/Header";
+import Counter from "./components/Counter";
+import Remove from "./components/Remove";
+import Footer from "./components/Footer";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+library.add(faPlus, faMinus);
 
 function App() {
+  const [counterTab, setCounterTab] = useState([0]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+        <section>
+          {counterTab.length < 3 && (
+            <button
+              className="addCounter"
+              onClick={() => {
+                if (counterTab.length < 3) {
+                  let newTab = [...counterTab];
+                  newTab.push(0);
+                  setCounterTab(newTab);
+                }
+              }}
+            >
+              Add counter
+            </button>
+          )}
+        </section>
+
+        <section>
+          {counterTab.map((item, index) => {
+            return (
+              <Counter
+                item={item}
+                key={index}
+                index={index}
+                counterTab={counterTab}
+                setCounterTab={setCounterTab}
+              />
+            );
+          })}
+        </section>
+      </main>
+      <Remove counterTab={counterTab} setCounterTab={setCounterTab} />
+      <Footer />
     </div>
   );
 }

@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+button {
+  outline: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  padding: 20px 40px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main section:first-child {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100px;
+}
+main section:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+}
+.header img {
+  width: 43px;
+  height: 50px;
+  margin-left: 30px;
+}
+.header h1 {
+  font-size: 48px;
+  font-weight: normal;
+  margin-left: 30px;
+}
+.line {
+  width: 100%;
+  height: 0px;
+  border: 1px solid #e5e5e5;
+}
+/* ADD */
+.addCounter {
+  width: 160px;
+  height: 50px;
+  background-color: #5c48d3;
+  border-radius: 15px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.addCounter:hover {
+  cursor: pointer;
+}
+/* RESET */
+.resetCounter {
+  width: 120px;
+  height: 50px;
+  background-color: #5c48d3;
+  border-radius: 15px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.resetCounter:hover {
+  cursor: pointer;
+}
+
+/* REMOVE */
+.removeCounter {
+  width: 250px;
+  height: 50px;
+  background-color: #5c48d3;
+  border-radius: 15px;
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.removeCounter:hover {
+  cursor: pointer;
+}
+
+.essai {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* COUNTER */
+.counter {
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.counterNumber {
+  background-color: #5c48d3;
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  border-radius: 14px;
+  margin: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.without-button {
+  height: 40px;
+  width: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonCounter {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: none;
+}
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 200px;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
 }
