@@ -4,4 +4,4 @@
 
 https://react-counterv2.netlify.app
 
-  <img src="./picture.png" width="350" alt="Netflix movies">
+  <img src="./picture.png" width="350" alt="counter v2">
